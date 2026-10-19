@@ -1,0 +1,54 @@
+{
+  "name": "pi-antigravity-unmask",
+  "version": "1.0.0",
+  "description": "Pi coding agent extension: treat Antigravity provider PROHIBITED_CONTENT stops as a normal finish, keep partial output in context, and continue seamlessly.",
+  "author": "Mystia",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AgentMystia/pi-antigravity-unmask.git"
+  },
+  "homepage": "https://github.com/AgentMystia/pi-antigravity-unmask#readme",
+  "bugs": {
+    "url": "https://github.com/AgentMystia/pi-antigravity-unmask/issues"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "antigravity",
+    "gemini",
+    "provider"
+  ],
+  "main": "./src/index.ts",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "README.zh-CN.md",
+    "src",
+    "tsconfig.json"
+  ],
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "engines": {
+    "node": ">=22.15.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node test/unmask.test.mjs"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "^0.86.1",
+    "@earendil-works/pi-coding-agent": "^1.2.0",
+    "@types/node": "^24.0.0",
+    "jiti": "^2.0.0",
+    "typescript": "^5.6.0"
+  }
+}
